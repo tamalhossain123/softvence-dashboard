@@ -3,8 +3,11 @@
 A premium React redesign of the Softvence Project Management dashboard
 (softvencealpha.com). Same pages and functions, completely new UI.
 Design v2 follows the reference look Tamal chose: full-screen floating frame,
-slim black icon rail, soft lavender/pastel glass cards, big rounded corners,
+slim black icon rail, soft pastel glass cards, big rounded corners,
 Plus Jakarta Sans, Framer Motion hover/entrance animation.
+Branding v3: the official Softvence logo (black wordmark, green "t") is used in
+the topbar and rail, and the whole palette runs on the logo's brand green
+#00AB0C with black.
 
 - Soft lavender + pastel palette on a light full-screen frame, black pill buttons
 - Home focused on "what needs me today": attention strip, 4 KPIs, projects, performance ring
