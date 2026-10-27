@@ -1,23 +1,55 @@
-# Softvence Dashboard — Redesign Prototype
+# Softvence Dashboard
 
-A premium React redesign of the Softvence Project Management dashboard
-(softvencealpha.com). Same pages and functions, completely new UI.
-Design v2 follows the reference look Tamal chose: full-screen floating frame,
-slim black icon rail, soft pastel glass cards, big rounded corners,
-Plus Jakarta Sans, Framer Motion hover/entrance animation.
-Branding v3: the official Softvence logo (black wordmark, green "t") is used in
-the topbar and rail, and the whole palette runs on the logo's brand green
-#00AB0C with black.
+A professional redesign of the Softvence Project Management dashboard,
+rebuilt in React. Calm, premium and user-friendly, with the official
+Softvence branding (logo green `#00AB0C` + black).
 
-- Soft lavender + pastel palette on a light full-screen frame, black pill buttons
-- Home focused on "what needs me today": attention strip, 4 KPIs, projects, performance ring
-- Projects table reduced from 10 columns to 6, plus a global search that did not exist before
-- All 16 views: Dashboard, Projects, Project Detail, Client Inbox, Pending Approvals,
-  Tasks (Kanban), Issues, Concerns, Bug Reports, Team Feed, Messages, My Team,
-  Learning, Notices, Instruction Videos, My Account
+Live preview: https://tamalhossain123.github.io/softvence-dashboard/
 
-`index.html` is a self-contained build of the prototype (mock data taken from the
-real dashboard structure). Live preview via GitHub Pages once enabled:
-Settings > Pages > Deploy from a branch > main / (root).
+## Tech stack
 
-Source code (React + Vite) lives outside this deployment folder.
+- React 19 + Vite
+- Framer Motion (animation)
+- Lucide icons
+- Plain CSS design system (src/index.css), Plus Jakarta Sans
+
+## Project structure
+
+```
+.
+├── .github/workflows/deploy.yml   # CI: build + deploy to GitHub Pages
+├── index.html                     # Vite entry page
+├── package.json
+├── vite.config.js
+├── public/
+│   └── favicon.png
+└── src/
+    ├── main.jsx                   # app bootstrap
+    ├── App.jsx                    # shell + all pages
+    ├── index.css                  # design system
+    └── assets/                    # Softvence logo files
+```
+
+## Run locally
+
+```bash
+npm install
+npm run dev        # development server
+npm run build      # production build into dist/
+npm run preview    # preview the production build
+```
+
+## Deployment
+
+Every push to `main` runs the GitHub Actions workflow in
+`.github/workflows/deploy.yml`, which builds the project and deploys
+`dist/` to GitHub Pages automatically.
+(Repo setting required once: Settings → Pages → Build and deployment →
+Source: **GitHub Actions**.)
+
+## Notes
+
+This is a design prototype: data is realistic mock data modelled on the
+live system, and interactions (tasks, concerns, bug reports, messages,
+feed posts) run in the browser. Connecting it to the real backend/API is
+the implementation step that follows design approval.
